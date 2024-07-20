@@ -6,7 +6,7 @@ RUN yum install -y wget && yum install -y unzip
 RUN yum clean all
 
 #Copy artifacts
-#COPY ./techmax-main/* /var/www/html/
+COPY /home/ec2-user/simple-web-app-main/techmax-main/. apache-container:/var/www/html/
 #RUN rm -rf techmax-main
 
 #Start the server
