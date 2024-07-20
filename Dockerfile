@@ -6,8 +6,8 @@ RUN yum install -y wget && yum install -y unzip
 RUN yum clean all
 
 #Copy artifacts
-COPY ./techmax-main/* /var/www/html/
-RUN rm -rf techmax-main
+#COPY ./techmax-main/* /var/www/html/
+#RUN rm -rf techmax-main
 
 #Start the server
 ENTRYPOINT ["/usr/sbin/httpd", "-D", "FOREGROUND"]
